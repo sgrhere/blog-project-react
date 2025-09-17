@@ -12,7 +12,7 @@
      fetchBlogs()   
     },[])
     ```
-<br>
+
 Here, we made:
 
 * useState as blogs which will hold all the data from the database
@@ -61,7 +61,7 @@ Here we:
     or by destructing it as 
     'Function Card({blog})' -> {blog.title}
     For image file:
-    <img src= {'backendURL' + blog.image}>
+    <img src= {'backendURL' + blog.image} />
     ```
 
 
