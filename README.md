@@ -14,6 +14,7 @@
     ```
 <br>
 Here, we made:
+
 * useState as blogs which will hold all the data from the database
 
 * useEffect that gives us a fetchBlogs function which will run the logic to retrieve data from db
@@ -34,7 +35,8 @@ Here, we made:
     ```
 <br>
 Here, we made:
-* Use the link of frontend which need to communicate to backend and access database.
+
+* Use the link of frontend which need to communicate to backend and access database. <br>
 Note:- make sure that the link must match as in frontend url. <br>
 
 3) Use props & props destruction method to pass data from backend and update it in frontend dynamically.
@@ -49,6 +51,7 @@ Note:- make sure that the link must match as in frontend url. <br>
     ```
 <br>
 Here we:
+
 * Used map function to run a loop for the array of objects which is stored as blogs. Using this map function, it will retrieve the individual blog details from the list of blogs present in the database (first obj to last, one after another) <br>
 
 * Used Card component here by passing a argument `blog` whose value is retrieved in above step. Now, while calling the Card component, the value of blog is passed which is then grabbed by either in:
