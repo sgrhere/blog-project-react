@@ -64,4 +64,35 @@ Here we:
     <img src= {'backendURL' + blog.image} />
     ```
 
+## Individual Blog page (GET method):
+(Follow same steps as done in above scenario) <br>
 
+* Just use useParams() hook to get the id from the requested url and then concatenate it with the axios.get(link) in order to fetch complete record from blog whose id is provided in the url. <br>
+    Note: Make these changes in function called by useEffect.
+    ```
+    const {id} = useParams()
+    .
+    .
+    const response = await axios.get("http://localhost:3000/blog/" + id)
+    ```
+
+## Delete the blog (DELETE method):
+
+* Use axios.delete in order to perform delete operation
+
+* Call the function say `deleteGarneFunction` when click event is triggered on delete button.
+
+* Use `useNavigate` hook to navigate the page to home page from currently deleted page.
+
+    ```
+    const deleteGarneFunction = async()=>{
+        const response = await axios.delete("http://localhost:3000/blog/" + id)
+        if(response.status === 200){
+            alert("Deleted successfully")
+            navigate("/")
+        }
+        else{
+            alert("Something went wrong")
+        }
+    }
+    ```
